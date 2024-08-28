@@ -65,7 +65,7 @@ class AdminController {
                 from:process.env.MAIL_FROM,
                 to:email,
                 subject:'Confirm email with verification',
-                html: `<h1 style='color:navy'>${OTP}</h1>`
+                html: `<h1>${OTP}</h1>`
             };
             sendMail(mail_options);
             return res.status(200).send({
